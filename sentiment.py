@@ -2,7 +2,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
 import re
 import string
 import nltk
@@ -12,9 +11,9 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load the model and other necessary files
-model = joblib.load(r"D:/Data_science_9-11/Project_ExcelR3-P230/codes/passmodel.pkl")    #check your directory
-vectorizer = joblib.load(r"D:/Data_science_9-11/Project_ExcelR3-P230/codes/tfidfvectorizer.pkl")    #check your directory
-df=pd.read_csv("D:/Data_science_9-11/Project_ExcelR3-P230/codes/dataset.csv")
+model = pickle.load(open("./passmodel.pkl","rb"))    #check your directory
+vectorizer = pickle.load(open("./tfidfvectorizer.pkl","rb"))    #check your directory
+df=pd.read_csv("./dataset.csv")
 
 
 stop_words = stopwords.words('english')
@@ -48,7 +47,7 @@ def set_background(png_file):
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
 
-set_background('D:/Data_science_9-11/Project_ExcelR3-P230/background.jpg')
+set_background('./background.jpg')
 
 
 
