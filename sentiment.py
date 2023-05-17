@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 import re
 import string
 import nltk
@@ -12,8 +12,8 @@ from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Load the model and other necessary files
-model = pickle.load(open("./passmodel.pkl","rb"))    #check your directory
-vectorizer = pickle.load(open("./tfidfvectorizer.pkl","rb"))    #check your directory
+model = joblib.load(r"./passmodel.pkl")    #check your directory
+vectorizer = joblib.load(r"./tfidfvectorizer.pkl")    #check your directory
 df=pd.read_csv("./dataset.csv")
 
 
