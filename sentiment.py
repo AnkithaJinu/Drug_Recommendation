@@ -10,6 +10,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
+nltk.download('stopwords')
 
 # Load the model and other necessary files
 model = joblib.load(r"./passmodel.pkl")    #check your directory
