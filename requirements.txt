@@ -6,3 +6,4 @@ statsmodels
 nltk
 sklearn
 scikit-learn
+pickle
