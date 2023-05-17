@@ -1,0 +1,8 @@
+pandas @ file:///C:/b/abs_b9kefbuby2/croot/pandas_1677835593760/work
+numpy @ file:///C:/ci/numpy_and_numpy_base_1653574844560/work
+statsmodels==0.13.5
+streamlit==1.20.0
+matplotlib @ file:///C:/b/abs_49b2acwxd4/croot/matplotlib-suite_1679593486357/work
+numpy
+pandas
+matplotlib
